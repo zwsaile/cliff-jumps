@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  width: 100vw;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.6%;
+  background-color: white;
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+}
+
+.nav-logo {
+margin-right: 1vw;
+}
+
+.nav-title {
+  letter-spacing: 0.2rem;
+}
