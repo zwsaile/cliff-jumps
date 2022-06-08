@@ -1,0 +1,43 @@
+.filter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  margin: 3%;
+  height: 10vh;
+  width: 40vw;
+  border-radius: 6px;
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+}
+
+.filter-name-container, .dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 75%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.filter-name-state {
+  border: none;
+  border-bottom: black 1px solid;
+  height: 3vh;
+  width: 15vw;
+  outline-color: #CAE8FC;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+select {
+  height: 3vh;
+  width: 8vw;
+  outline-color: #CAE8FC;
+}
