@@ -2,9 +2,10 @@ import '../styles/CardContainer.css';
 import Cards from './Cards';
 
 const CardContainer = (props) => {
+
   return (
     <section className='card-container'>
-      <Cards data={props.data}/>
+      {props.data && <Cards data={props.data} loading={props.loading}/>}
     </section>
   )
 }

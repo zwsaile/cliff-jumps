@@ -1,19 +1,34 @@
 import '../styles/Filter.css';
+import { useState } from 'react'
 
 const Filter = (props) => {
 
   const handleName = (event) => {
     props.setName(event.target.value)
+    if (!event.target.value) {
+      props.apiCall()
+    } else {
+      props.setData(props.data.filter(cliff => cliff.name.includes(props.name)))
+    }
   }
 
   const handleDifficulty = (event) => {
     props.setDifficulty(event.target.value)
+    if (event.target.value === 'Pro') {
+      props.setData(props.data.filter(cliff => cliff.maxHeight > 65))
+    } else if (event.target.value === 'Having Fun') {
+      props.setData(props.data.filter(cliff => cliff.maxHeight <= 60 && cliff.maxHeight >= 40))
+    } else if (event.target.value === 'Newbie'){
+      props.setData(props.data.filter(cliff => cliff.maxHeight < 40))
+    } else {
+      props.apiCall()
+    }
   }
 
   return (
     <div className='filter-container'>
       <div className='filter-name-container'>
-        <label htmlFor='name'>Filter by name or by state:</label>
+        <label htmlFor='name'>Filter by name</label>
         <input
           className='filter-name-state'
           type='text'
