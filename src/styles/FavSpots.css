@@ -1,0 +1,43 @@
+.fav-container {
+  margin-top: 10vh;
+}
+
+.fav-box {
+  display: flex;
+  background-color: white;
+  height: 30vh;
+  width: 80vw;
+  border-radius: 5px;
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+}
+
+.fav-photo {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.fav-details {
+  margin: 1.5% 3%;
+  line-height: 2rem;
+}
+
+.fav-name-location {
+  margin-bottom: 20%;
+}
+
+.fav-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.fav-location {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
