@@ -5,7 +5,7 @@ const CardContainer = (props) => {
 
   return (
     <section className='card-container'>
-      {props.data && <Cards data={props.data} loading={props.loading}/>}
+      {props.data && <Cards data={props.data} favs={props.favs} setFavs={props.setFavs}/>}
     </section>
   )
 }

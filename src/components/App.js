@@ -2,14 +2,15 @@ import '../styles/App.css';
 import Nav from './Nav'
 import Filter from './Filter'
 import CardContainer from './CardContainer'
+import FavSpots from './FavSpots'
 import { useState, useEffect } from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 const App = () => {
   const [data, setData] = useState([])
   const [difficulty, setDifficulty] = useState('')
   const [name, setName] = useState('')
-  const [favPage, setFavPage] = useState(false)
+  const [favs, setFavs] = useState([])
 
   const apiCall = () => {
     var myHeaders = new Headers();
@@ -27,28 +28,29 @@ const App = () => {
       .catch(error => console.log(error, 'error'))
     }
 
-    const goToFav = () => {
-      setFavPage(true)
-    }
-
     useEffect(() => {
       apiCall()
     }, [])
 
   return (
-    <div className="app">
-      <Nav goToFav={goToFav}/>
-      <Route path='/' render{() => <Filter
-        difficulty={difficulty}
-        setDifficulty={setDifficulty}
-        name={name}
-        setName={setName}
-        data={data}
-        setData={setData}
-        apiCall={apiCall}
-      />}
-      <Route path='/' render{() => <CardContainer data={data}/>}
-    </div>
+    <main className='app'>
+      <Nav />
+      <Route exact path='/'>
+        <Filter
+          difficulty={difficulty}
+          setDifficulty={setDifficulty}
+          name={name}
+          setName={setName}
+          data={data}
+          setData={setData}
+          apiCall={apiCall}
+        />
+        <CardContainer data={data} favs={favs} setFavs={setFavs}/>
+      </Route>
+      <Route exact path='/fav-spots'>
+        <FavSpots favs={favs} setFavs={setFavs}/>
+      </Route>
+    </main>
   )
 }
 

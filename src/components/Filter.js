@@ -1,5 +1,4 @@
 import '../styles/Filter.css';
-import { useState } from 'react'
 
 const Filter = (props) => {
 

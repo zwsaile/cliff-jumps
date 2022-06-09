@@ -2,10 +2,14 @@ import '../styles/Cards.css';
 
 const Cards = (props) => {
 
+  const saveSpot = (favCliff) => {
+    props.setFavs(prevState => [...prevState, favCliff])
+  }
+
   let allCliffs = props.data.map(cliff => {
     return (
       <div className='card-box' key={cliff.id}>
-        <img className='card-photo' src={cliff.photo}/>
+        <img className='card-photo' src={cliff.photo} alt={`A popular cliff diving area at ${cliff.name} in ${cliff.location}`}/>
         <div className='card-details'>
           <div className='name-location'>
             <p className='card-name'>{cliff.name}</p>
@@ -17,7 +21,7 @@ const Cards = (props) => {
               <p className='card-name'>Max Height: {cliff.maxHeight} feet</p>
               <p className='card-name'>Water Depth: {cliff.depth} feet</p>
             </div>
-            <button className='send-btn'>Send It</button>
+            <button className='send-btn' onClick={() => saveSpot(cliff)}>Send It</button>
           </div>
         </div>
       </div>
