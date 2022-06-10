@@ -47,3 +47,55 @@
   font-size: 1.2rem;
   font-weight: 500;
 }
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .fav-container {
+    height: 20vh;
+    margin: 14vh;
+  }
+  .fav-details {
+    margin-left: -5%;
+  }
+}
+
+@media screen and (min-width: 675px) and (max-width: 900px) {
+  .fav-container {
+    height: 20vh;
+    margin-top: 15vh;
+  }
+  .fav-details {
+    margin-left: -10%;
+  }
+  .fav-name {
+    font-size: 1rem;
+  }
+  .fav-location {
+    font-size: 0.9rem;
+  }
+  .fav-sub-details {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .fav-container {
+    height: 15vh;
+    margin-top: 10vh;
+  }
+  .fav-box {
+    height: 20vh;
+  }
+  .fav-details {
+    margin-left: 0%;
+    line-height: 1.1rem
+  }
+  .fav-name {
+    font-size: 0.75rem;
+  }
+  .fav-location {
+    font-size: 0.65rem;
+  }
+  .fav-sub-details {
+    font-size: 0.55rem;
+  }
+}
