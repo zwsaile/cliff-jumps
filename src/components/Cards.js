@@ -13,13 +13,13 @@ const Cards = (props) => {
         <div className='card-details'>
           <div className='name-location'>
             <p className='card-name'>{cliff.name}</p>
-            <p className='card-name'>{cliff.location}</p>
+            <p className='card-location'>{cliff.location}</p>
           </div>
           <div className='sub-details'>
             <div className='sub-text'>
-              <p className='card-'>Type: {cliff.type}</p>
-              <p className='card-name'>Max Height: {cliff.maxHeight} feet</p>
-              <p className='card-name'>Water Depth: {cliff.depth} feet</p>
+              <p className='card-type'>Type: {cliff.type}</p>
+              <p className='card-height'>Max Height: {cliff.maxHeight} feet</p>
+              <p className='card-depth'>Water Depth: {cliff.depth} feet</p>
             </div>
             <button className='send-btn' onClick={() => saveSpot(cliff)}>Send It</button>
           </div>

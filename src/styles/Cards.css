@@ -5,7 +5,7 @@
   align-items: center;
   height: 40vh;
   width: 25vw;
-  margin: 6vh 2vw;
+  margin: 8vh 2vw;
 }
 
 .card-photo {
@@ -28,7 +28,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.4rem;
   width: 25vw;
   border-radius: 5px;
@@ -39,6 +39,10 @@
     0 8px 8px hsl(0deg 0% 0% / 0.075),
     0 16px 16px hsl(0deg 0% 0% / 0.075)
   ;
+}
+
+.name-location {
+  font-weight: 700;
 }
 
 .sub-details {
@@ -65,4 +69,66 @@
     0 8px 8px hsl(0deg 0% 0% / 0.075),
     0 16px 16px hsl(0deg 0% 0% / 0.075)
   ;
+}
+
+.send-btn:hover {
+  transform: translateY(-3px);
+  transition: 0.2s ease;
+  box-shadow:
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 10px 10px hsl(0deg 0% 0% / 0.075),
+    0 20px 20px hsl(0deg 0% 0% / 0.075)
+  ;
+}
+
+.send-btn:active {
+  transform: translateY(0px);
+  transition: 0.2s ease;
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1600px) {
+  .card-details {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 975px) and (max-width: 1250px) {
+  .card-details {
+    font-size: 0.6rem;
+  }
+  .sub-text {
+    display: none;
+    width: 1vw;
+  }
+  .send-btn {
+    width: 12vw;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .card-box {
+    margin: 2%;
+  }
+  .card-details {
+    font-size: 0.5rem;
+    flex-direction: column;
+  }
+  .sub-text {
+    display: none;
+    width: 1vw;
+  }
+  .send-btn {
+    width: 20vw;
+    font-size: 0.5rem;
+  }
 }

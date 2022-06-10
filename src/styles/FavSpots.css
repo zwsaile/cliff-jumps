@@ -1,9 +1,13 @@
 .fav-container {
-  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 12vh;
 }
 
 .fav-box {
   display: flex;
+  justify-content: space-between;
   background-color: white;
   height: 30vh;
   width: 80vw;
@@ -19,12 +23,14 @@
 
 .fav-photo {
   height: 100%;
+  width: 28%;
   object-fit: cover;
   border-radius: 5px;
 }
 
 .fav-details {
-  margin: 1.5% 3%;
+  margin-top: 1.5%;
+  margin-left: -10%;
   line-height: 2rem;
 }
 
