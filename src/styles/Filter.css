@@ -3,7 +3,8 @@
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  margin: 3%;
+  margin-top: 6%;
+  margin-bottom: 2%;
   height: 10vh;
   width: 40vw;
   border-radius: 6px;
@@ -22,7 +23,7 @@
   justify-content: space-around;
   align-items: center;
   height: 75%;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 
@@ -40,4 +41,68 @@ select {
   height: 3vh;
   width: 8vw;
   outline-color: #CAE8FC;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1250px) {
+  .filter-container {
+    height: 9vh;
+    width: 35vw;
+    margin-top: 8%;
+  }
+  .filter-name-container, .dropdown {
+    height: 65%;
+    font-size: 1rem;
+  }
+  .filter-name-state {
+    height: 2.5vh;
+    width: 12vw;
+    font-size: 1.0rem;
+  }
+  select {
+    height: 3vh;
+    width: 10vw;
+  }
+}
+
+@media screen and (min-width: 435px) and (max-width: 800px) {
+  .filter-container {
+    height: 8vh;
+    width: 45vw;
+    margin-top: 10%;
+  }
+  .filter-name-container, .dropdown {
+    height: 60%;
+    font-size: 0.8rem;
+  }
+  .filter-name-state {
+    height: 2vh;
+    width: 20vw;
+    font-size: 0.8rem;
+  }
+  select {
+    height: 3vh;
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .filter-container {
+    height: 8vh;
+    width: 50vw;
+    margin-top: 15%;
+  }
+  .filter-name-container, .dropdown {
+    height: 60%;
+    font-size: 0.6rem;
+  }
+  .filter-name-state {
+    height: 2vh;
+    width: 20vw;
+    font-size: 0.6rem;
+  }
+  select {
+    height: 3vh;
+    width: 18vw;
+    font-size: 0.7rem;
+  }
 }

@@ -21,7 +21,7 @@ const FavSpots = (props) => {
               </div>
             </div>
           </div>
-          <Map />
+          <Map lat={fav.latLong[0]} long={fav.latLong[1]} uniqueKey={props.id}/>
         </div>
       </section>
     )
