@@ -1,4 +1,5 @@
 import '../styles/Filter.css';
+import PropTypes from 'prop-types'
 
 const Filter = (props) => {
 
@@ -53,6 +54,12 @@ const Filter = (props) => {
       </div>
     </div>
   )
+}
+
+Filter.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string
+  }))
 }
 
 export default Filter;

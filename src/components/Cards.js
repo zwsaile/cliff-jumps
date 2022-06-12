@@ -1,4 +1,5 @@
 import '../styles/Cards.css';
+import PropTypes from 'prop-types'
 
 const Cards = (props) => {
 
@@ -33,6 +34,18 @@ const Cards = (props) => {
       {allCliffs}
     </>
   )
+}
+
+Cards.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    photo: PropTypes.string,
+    name: PropTypes.string,
+    location: PropTypes.string,
+    type: PropTypes.string,
+    maxHeight: PropTypes.number,
+    depth: PropTypes.number
+  }))
 }
 
 export default Cards;

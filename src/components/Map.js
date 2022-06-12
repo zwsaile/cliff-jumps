@@ -1,6 +1,7 @@
 import '../styles/Map.css';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api'
 import { apiKeys } from '../config'
+import PropTypes from 'prop-types'
 
 const Map = (props) => {
 
@@ -19,6 +20,12 @@ const Map = (props) => {
       </GoogleMap>
     )
   }
+}
+
+Map.propTypes = {
+  lat: PropTypes.number,
+  long: PropTypes.number,
+  uniqueKey: PropTypes.number
 }
 
 export default Map

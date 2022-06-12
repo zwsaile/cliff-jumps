@@ -1,5 +1,6 @@
 import '../styles/FavSpots.css';
 import Map from './Map'
+import PropTypes from 'prop-types'
 
 const FavSpots = (props) => {
 
@@ -32,6 +33,19 @@ const FavSpots = (props) => {
       {allFavs}
     </>
   )
+}
+
+FavSpots.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    photo: PropTypes.string,
+    name: PropTypes.string,
+    location: PropTypes.string,
+    type: PropTypes.string,
+    maxHeight: PropTypes.number,
+    depth: PropTypes.number,
+    latLong: PropTypes.arrayOf(PropTypes.number)
+  }))
 }
 
 export default FavSpots;
