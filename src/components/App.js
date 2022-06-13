@@ -22,7 +22,7 @@ const App = () => {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:8080/api/v1/cliffs", requestOptions)
+    fetch("https://cliff-jump-api.herokuapp.com/api/v1/cliffs", requestOptions)
       .then(response => response.json())
       .then(result => setData(result.cliffs))
       .catch(error => console.log(error, 'error'))
