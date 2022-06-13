@@ -12,11 +12,6 @@ There is also a page where the user can save their favorite spots. This page com
 - [@zwsaile](https://www.github.com/zwsaile)
 
 
-## Demo
-
-Insert gif or link to demo
-
-
 ## Tech Stack
 
 **Client:** React, CSS
