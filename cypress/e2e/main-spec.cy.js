@@ -1,7 +1,7 @@
 describe('Main Page', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/');
-        cy.intercept('GET', 'http://localhost:3001/api/v1/cliffs', { fixture: 'cliffs.json' }).as('cliffs')
+        cy.intercept('GET', 'https://cliff-jump-api.herokuapp.com/api/v1/cliffs', { fixture: 'cliffs.json' }).as('cliffs')
     })
 
     it('Should load main URL', () => {
