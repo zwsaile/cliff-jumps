@@ -11,17 +11,22 @@ There is also a page where the user can save their favorite spots. This page com
 
 - [@zwsaile](https://www.github.com/zwsaile)
 
+## Demo
+
+### Main Page
+
+https://user-images.githubusercontent.com/82775910/173383819-e34c82ab-d820-4ff2-a894-d69796f4b363.mp4
+
+### Fav Page
+
+https://user-images.githubusercontent.com/82775910/173383926-85c65e42-9510-4abc-bfc2-950493097388.mp4
+
 
 ## Tech Stack
 
 **Client:** React, CSS
 
 **Server:** Node, Express
-
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 ## Run Locally
 
