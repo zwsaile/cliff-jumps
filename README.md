@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+![Send It Logo](public/assets/lake-logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Send It
 
-In the project directory, you can run:
+A responsive web application that offers adventurers and cliff divers a robust list of cliff diving spots across the U.S.A.
 
-### `npm start`
+There is also a page where the user can save their favorite spots. This page comes with a Google Map component to help with navigation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Authors
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [@zwsaile](https://www.github.com/zwsaile)
 
-### `npm test`
+## Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Main Page
 
-### `npm run build`
+https://user-images.githubusercontent.com/82775910/173383819-e34c82ab-d820-4ff2-a894-d69796f4b363.mp4
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Fav Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://user-images.githubusercontent.com/82775910/173383926-85c65e42-9510-4abc-bfc2-950493097388.mp4
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Client:** React, CSS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Server:** Node, Express
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Custom Express API
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+https://cliff-jump-api.herokuapp.com/
 
-## Learn More
+## Run Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  git clone git@github.com:zwsaile/cliff-jumps.git
+```
 
-### Code Splitting
+Go to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  cd my-project
+```
 
-### Analyzing the Bundle Size
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  npm install
+```
 
-### Making a Progressive Web App
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+  npm run start
+```
 
-### Advanced Configuration
+## Running Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To run tests, run the following command
 
-### Deployment
+```bash
+  npm run cypress
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Deployment
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Send It](https://bigsendcliffs.netlify.app/)
