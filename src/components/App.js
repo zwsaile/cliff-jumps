@@ -22,7 +22,7 @@ const App = () => {
       redirect: 'follow'
     };
 
-    fetch("https://cliff-api.vercel.app/api/v1/cliffs", requestOptions)
+    fetch("cliff-api.vercel.app/api/v1/cliffs", requestOptions)
       .then(response => response.json())
       .then(result => setData(result.cliffs))
       .catch(error => console.log(error, 'error'))
