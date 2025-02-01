@@ -10,7 +10,7 @@ const Cards = (props) => {
   let allCliffs = props.data.map(cliff => {
     return (
       <div className='card-box' key={cliff.id}>
-        <img className='card-photo' src={`http://cliff-api-git-main-zwsailes-projects.vercel.app${cliff.photo}`} alt={`A popular cliff diving area at ${cliff.name} in ${cliff.location}`}/>
+        <img className='card-photo' src={`https://cliff-api.vercel.app/public${cliff.photo}`} alt={`A popular cliff diving area at ${cliff.name} in ${cliff.location}`}/>
         <div className='card-details'>
           <div className='name-location'>
             <p className='card-name'>{cliff.name}</p>
