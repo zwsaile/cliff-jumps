@@ -4,12 +4,13 @@ import PropTypes from 'prop-types'
 const Filter = (props) => {
 
   const handleName = (event) => {
-    const newName = event.target.value;
+    const newName = event.target.value.trim();
     props.setName(newName);
     if (!newName) {
       props.apiCall();
     } else {
-      props.setData(props.data.filter(cliff => cliff.name.includes(newName)));
+      const filteredData = props.data.filter(cliff => cliff.name.toLowerCase().includes(newName.toLowerCase()));
+      props.setData(filteredData);
     }
   };
 
