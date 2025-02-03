@@ -4,4 +4,35 @@
   height: 77vh;
   width: 90vw;
   overflow-y: auto;
+  justify-content: center;
+}
+
+.loading-msg {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: black;
+  letter-spacing: 0.1ch;
+}
+
+.loading-msg:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 1000ms infinite;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: "\2026";
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 30px;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 30px;
+  }
 }

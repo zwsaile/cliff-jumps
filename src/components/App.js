@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <main className='app'>
-      <Nav />
+      <Nav favs={favs}/>
       <Route exact path='/'>
         <Filter
           difficulty={difficulty}

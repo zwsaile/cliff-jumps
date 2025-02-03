@@ -2,7 +2,7 @@ import '../styles/Nav.css';
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
-const Nav = (props) => {
+const Nav = ({favs}) => {
   const [onFav, setOnFav] = useState(true)
 
   const swapToHomeButton = () => {
@@ -19,11 +19,20 @@ const Nav = (props) => {
         <img className='nav-logo' src='../assets/lake-logo.png' alt='A red circular logo with a white drawing of a hill with two trees overlooking a lake'/>
         <h1 className='nav-title'>Send It</h1>
       </div>
+      <div className='fav-btns'>
         {onFav ?
           <NavLink to='fav-spots'><button className='fav-spot-btn' onClick={swapToHomeButton}>Fav Spots</button></NavLink> :
           <NavLink to='/'><button className='fav-spot-btn' onClick={swapToFavButton}>Home</button></NavLink>
         }
-
+        {favs ?
+          <p className='fav-spot-counter'>
+            {favs.length}
+          </p> :
+          <p className='fav-spot-counter'>
+            No saved spots!
+          </p>
+        }
+      </div>
     </div>
   )
 }
