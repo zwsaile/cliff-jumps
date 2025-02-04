@@ -8,6 +8,7 @@ import { Route } from 'react-router-dom'
 
 const App = () => {
   const [data, setData] = useState([])
+  const [allCliffs, setAllCliffs] = useState([])
   const [difficulty, setDifficulty] = useState('')
   const [name, setName] = useState('')
   const [favs, setFavs] = useState([])
@@ -24,7 +25,10 @@ const App = () => {
 
     fetch("https://cliff-api.onrender.com/api/v1/cliffs", requestOptions)
       .then(response => response.json())
-      .then(result => setData(result.cliffs))
+      .then(result => {
+        setData(result.cliffs)
+        setAllCliffs(result.cliffs)
+      })
       .catch(error => console.log(error, 'error'))
     }
 
@@ -43,7 +47,7 @@ const App = () => {
           setName={setName}
           data={data}
           setData={setData}
-          apiCall={apiCall}
+          allCliffs={allCliffs}
         />
         <CardContainer data={data} favs={favs} setFavs={setFavs}/>
       </Route>

@@ -1,8 +1,10 @@
 import '../styles/Nav.css';
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Nav = ({favs}) => {
+  const counterRef = useRef(null);
+
   const [onFav, setOnFav] = useState(true)
 
   const swapToHomeButton = () => {
@@ -12,6 +14,15 @@ const Nav = ({favs}) => {
   const swapToFavButton = () => {
     setOnFav(true)
   }
+
+  useEffect(() => {
+    if (counterRef.current) {
+      counterRef.current.classList.add("ripple-active");
+      setTimeout(() => {
+        counterRef.current.classList.remove("ripple-active");
+      }, 1000);
+    }
+  }, [favs.length]);
 
   return (
     <div className='nav'>
@@ -24,14 +35,9 @@ const Nav = ({favs}) => {
           <NavLink to='fav-spots'><button className='fav-spot-btn' onClick={swapToHomeButton}>Fav Spots</button></NavLink> :
           <NavLink to='/'><button className='fav-spot-btn' onClick={swapToFavButton}>Home</button></NavLink>
         }
-        {favs ?
-          <p className='fav-spot-counter'>
-            {favs.length}
-          </p> :
-          <p className='fav-spot-counter'>
-            No saved spots!
+          <p ref={counterRef} className='fav-spot-counter' tabIndex="0">
+            {favs.length > 0 ? favs.length : ''}
           </p>
-        }
       </div>
     </div>
   )

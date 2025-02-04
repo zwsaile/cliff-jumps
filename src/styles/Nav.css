@@ -1,3 +1,4 @@
+/* Navigation Bar */
 .nav {
   display: flex;
   position: absolute;
@@ -13,10 +14,10 @@
     0 2px 2px hsl(0deg 0% 0% / 0.075),
     0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075),
-    0 16px 16px hsl(0deg 0% 0% / 0.075)
-  ;
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
+/* Logo and Title */
 .logo-title {
   display: flex;
   justify-content: space-between;
@@ -32,6 +33,7 @@
   font-weight: 900;
 }
 
+/* Favorite Buttons */
 .fav-btns {
   display: flex;
   flex-direction: row;
@@ -53,7 +55,7 @@
     0 2px 2px hsl(0deg 0% 0% / 0.075),
     0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075),
-    0 16px 16px hsl(0deg 0% 0% / 0.075)
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
 .fav-spot-btn:hover {
@@ -64,8 +66,7 @@
     0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075),
     0 10px 10px hsl(0deg 0% 0% / 0.075),
-    0 20px 20px hsl(0deg 0% 0% / 0.075)
-  ;
+    0 20px 20px hsl(0deg 0% 0% / 0.075);
 }
 
 .fav-spot-btn:active {
@@ -76,10 +77,10 @@
     0 2px 2px hsl(0deg 0% 0% / 0.075),
     0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075),
-    0 16px 16px hsl(0deg 0% 0% / 0.075)
-  ;
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
+/* Favorite Counter */
 .fav-spot-counter {
   display: flex;
   align-items: center;
@@ -88,10 +89,45 @@
   font-weight: 900;
   background-color: white;
   color: #FF291A;
-  width: 2vw;
-  height: 2vh;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Ripple Effect for State Change */
+.fav-spot-counter::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: #FF291A;
+  opacity: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Class that triggers ripple */
+.fav-spot-counter.ripple-active::after {
+  animation: ripple 0.4s ease-out forwards;
+}
+
+/* Keyframe Animation */
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
 @media screen and (min-width: 975px) and (max-width: 1250px) {
   .fav-spot-btn {
     width: 9vw;

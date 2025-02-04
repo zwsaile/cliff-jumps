@@ -17,13 +17,13 @@ const Filter = (props) => {
   const handleDifficulty = (event) => {
     props.setDifficulty(event.target.value)
     if (event.target.value === 'Pro') {
-      props.setData(props.data.filter(cliff => cliff.maxHeight > 65))
+      props.setData(props.allCliffs.filter(cliff => cliff.maxHeight > 60))
     } else if (event.target.value === 'Having Fun') {
-      props.setData(props.data.filter(cliff => cliff.maxHeight <= 60 && cliff.maxHeight >= 40))
+      props.setData(props.allCliffs.filter(cliff => cliff.maxHeight <= 60 && cliff.maxHeight >= 40))
     } else if (event.target.value === 'Newbie'){
-      props.setData(props.data.filter(cliff => cliff.maxHeight < 40))
+      props.setData(props.allCliffs.filter(cliff => cliff.maxHeight < 40))
     } else {
-      props.apiCall()
+      props.setData(props.allCliffs)
     }
   }
 
