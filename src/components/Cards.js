@@ -4,7 +4,9 @@ import PropTypes from 'prop-types'
 const Cards = (props) => {
 
   const saveSpot = (favCliff) => {
-    props.setFavs(prevState => [...prevState, favCliff])
+    if (!props.favs.includes(favCliff)) {
+      props.setFavs(prevState => [...prevState, favCliff])
+    }
   }
 
   let allCliffs = props.data.map(cliff => {
